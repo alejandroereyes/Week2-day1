@@ -23,7 +23,7 @@ def print_profile (hsh, num)
     puts " ! Invalid Entry !"
     print_profile(hsh, num)
   #prints out info
-  elsif user_choice == "y"
+  else user_choice == "y"
     puts "Name: #{hsh[:name]}"
     puts "Age: #{hsh[:age]}"
     puts "User Name: #{hsh[:username]}"
