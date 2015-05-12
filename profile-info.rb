@@ -21,7 +21,7 @@ def print_profile (hsh, num)
   # validate user input - will repeat till input is "n" or "y"
   elsif user_choice != "y" && user_choice != "n"
     puts " ! Invalid Entry !"
-    print_profile(hsh)
+    print_profile(hsh, num)
   #prints out info
   elsif user_choice == "y"
     puts "Name: #{hsh[:name]}"
@@ -30,8 +30,9 @@ def print_profile (hsh, num)
     puts "City: #{hsh[:city]}"
     puts "Country: #{hsh[:country]}"
     print "Favrorite Foods: "
-    hsh[:fav_foods].each {|food| print "#{num}.#{food} "
-    num += 1}
+    hsh[:fav_foods].each do |food| print "#{num}.#{food} "
+    num += 1
+    end
   end
 end
 
